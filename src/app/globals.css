@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+}
+
+@theme inline {
+  --font-actay: "Actay Wide", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-montserrat);
+}
