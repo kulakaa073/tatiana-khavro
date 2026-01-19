@@ -30,15 +30,13 @@ export default function Hero() {
           fill
           sizes="100vw"
           className="-z-10 object-cover object-top"
-          priority
         />
         <Image
-          src="/images/noise.webp"
+          src="/images/noise.png"
           alt="noise"
           fill
           sizes="100vw"
           className="-z-10 object-cover object-top"
-          priority
         />
         <div className="absolute left-1/2 -translate-x-1/2 top-[192px] w-[771px] h-[565px] blur-[70.85px] bg-bg-primary pointer-events-none" />
       </div>
