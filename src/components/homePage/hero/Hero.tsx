@@ -62,7 +62,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-[12px] leading-[125%] text-center text-white max-w-[228px] mx-auto"
         >
           по психологии денег и жизненных сценариев

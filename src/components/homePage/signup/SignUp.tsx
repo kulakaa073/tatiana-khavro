@@ -15,14 +15,14 @@ export default function SignUp() {
       <Container className="relative pb-[19px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1, ease: [0.25, 0.1, 0.25, 1] }}
           className="absolute -z-10 left-1/2 -translate-x-1/2 bottom-[-505px] w-[771px] h-[565px] blur-[70.85px] bg-bg-glow"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <MainButton variant="white" className="w-full h-[52px] rounded-full" onClick={() => setIsPopUpShown(true)}>Записаться на консультацию</MainButton>
         </motion.div>

@@ -7,9 +7,8 @@ export default function Bonus() {
     <Container className="mb-[16px]">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className="relative flex items-center gap-4 h-[57px] rounded-[8px]
             bg-linear-to-r from-purple-700 to-purple-800 px-[14px]"
       >
@@ -26,9 +25,8 @@ export default function Bonus() {
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.6, delay: 1.35, ease: [0.25, 0.1, 0.25, 1] }}
           className="absolute z-10 right-[-14px] -top-11 w-[67px] h-[67px]"
         >
           <Image src="/images/giftbox.svg" alt="bonus" width={67} height={67} />
