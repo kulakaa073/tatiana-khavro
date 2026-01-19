@@ -10,8 +10,17 @@ export const CallBackValidation = () => {
       .max(30, "Имя должно быть не более 30 символов")
       .matches(nameRegex, "Имя должно содержать только буквы")
       .required("Имя является обязательным"),
-    telegram: yup.string().matches(telegramRegex, "Telegram должен быть в формате @username").required("Telegram является обязательным"),
-    instagram: yup.string().matches(instagramRegex, "Instagram должен быть в формате @username"),
+    telegram: yup
+      .string()
+      .min(5, "Имя пользователя Telegram должно быть не менее 5 символов")
+      .max(32, "Имя пользователя Telegram должно быть не более 32 символов")
+      .matches(telegramRegex, "Telegram должен быть в формате @username")
+      .required("Telegram является обязательным"),
+    instagram: yup
+      .string()
+      .min(1, "Имя пользователя Instagram должно быть не менее 1 символа")
+      .max(30, "Имя пользователя Instagram должно быть не более 30 символов")
+      .matches(instagramRegex, "Instagram должен быть в формате @username"),
     message: yup.string().required("Сообщение является обязательным"),
   });
 
