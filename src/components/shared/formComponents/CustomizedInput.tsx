@@ -53,7 +53,7 @@ export default function CustomizedInput({
   const isTouched = (touched as Record<string, unknown>)[fieldName];
 
   const labelStyles = "relative flex flex-col justify-center w-full";
-  const fieldStyles = `relative w-full h-[110px] px-6 pt-3 pb-0 text-[12px] lg:text-[14px] font-normal leading-[143%] text-black placeholder:text-black/40 border-[1.5px] rounded-[14px] outline-none resize-none transition duration-300 ease-out`;
+  const fieldStyles = `relative w-full h-[110px] px-6 pt-3 pb-0 text-[12px] lg:text-[14px] font-normal leading-[143%] text-black placeholder:text-black/30 border-[1.5px] rounded-[14px] outline-none resize-none transition duration-300 ease-out`;
   const errorStyles =
     "mt-2 text-[10px] font-normal leading-none text-red-500";
 
