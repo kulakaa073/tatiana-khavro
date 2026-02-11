@@ -20,6 +20,7 @@ interface CustomizedInputProps {
   touched: FormikTouched<Values>;
   isRequired?: boolean;
   as?: string;
+  labelText?: string;
   labelClassName?: string;
   fieldClassName?: string;
   mask?: string | RegExp | (string | RegExp)[];
@@ -37,6 +38,7 @@ export default function CustomizedInput({
   errors,
   touched,
   as,
+  labelText,
   labelClassName = "",
   fieldClassName = "",
   fieldFontSize = "",
@@ -51,12 +53,17 @@ export default function CustomizedInput({
   const isTouched = (touched as Record<string, unknown>)[fieldName];
 
   const labelStyles = "relative flex flex-col justify-center w-full";
-  const fieldStyles = `relative w-full h-[46px] px-6 py-3 text-[12px] lg:text-[14px] font-normal leading-[143%] text-black placeholder:text-black/70 border-[1.5px] ${as === "textarea" ? "rounded-[14px]" : "rounded-full"} outline-none resize-none transition duration-300 ease-out`;
+  const fieldStyles = `relative w-full h-[110px] px-6 pt-3 pb-0 text-[12px] lg:text-[14px] font-normal leading-[143%] text-black placeholder:text-black/70 border-[1.5px] rounded-[14px] outline-none resize-none transition duration-300 ease-out`;
   const errorStyles =
-    "absolute bottom-[-11px] left-2 text-[9px] font-normal leading-none text-red-500";
+    "mt-2 text-[10px] font-normal leading-none text-red-500";
 
   return (
     <label className={`${labelStyles} ${labelClassName}`}>
+      {labelText && (
+        <span className="mb-2 text-[16px] font-bold leading-[143%] text-black">
+          {labelText}
+        </span>
+      )}
       <Field
         as={as}
         mask={mask}
@@ -66,11 +73,9 @@ export default function CustomizedInput({
         autoComplete="on"
         onChange={onChange || handleChange}
         onFocus={onFocus}
-        className={`${fieldStyles} ${as === "textarea" ? "h-[85px]" : ""
-          } ${fieldClassName} ${fieldFontSize} ${isError && isTouched
-            ? "border-red"
-            : "border-black"
-          }`}
+        className={`${fieldStyles} ${fieldClassName} ${fieldFontSize} ${
+          isError && isTouched ? "border-red" : "border-black"
+        }`}
       />
       {isLoading && <LoaderIcon />}
       <ErrorMessage name={fieldName} component="p" className={errorStyles} />

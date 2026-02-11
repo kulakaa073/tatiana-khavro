@@ -8,6 +8,7 @@ interface MainButtonProps {
   disabled?: boolean;
   isLoading?: boolean;
   variant?: "white" | "black";
+  shape?: "pill" | "square";
 }
 
 export default function MainButton({
@@ -18,16 +19,23 @@ export default function MainButton({
   disabled = false,
   isLoading = false,
   variant = "black",
+  shape = "pill",
 }: MainButtonProps) {
   const variantClasses = {
     white: "bg-white text-black",
     black: "bg-black text-white",
   };
 
+  const shapeClasses = {
+    pill: "rounded-full",
+    square: "rounded-[14px]",
+  };
+
   return (
     <button
-      className={`${variantClasses[variant]} ${className} ${disabled ? "opacity-50" : ""}
-        rounded-full flex items-center justify-center font-actay font-bold text-[12px] leading-[15px] uppercase cursor-pointer`}
+      className={`${variantClasses[variant]} ${shapeClasses[shape]} ${className} ${
+        disabled ? "opacity-50" : ""
+      } flex items-center justify-center font-actay font-bold text-[12px] leading-[15px] uppercase cursor-pointer`}
       onClick={onClick}
       type={type}
       disabled={disabled || isLoading}
