@@ -62,7 +62,7 @@ export default function Modal({
         className={`${isModalShown
           ? " -translate-y-[calc(50dvh-50%)] opacity-100 scale-100"
           : "pointer-events-none opacity-0 scale-90"
-          } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition ease-out z-9999 duration-600 w-[87%] max-w-[470px] lg:max-w-[512px] max-h-dvh px-5 lg:px-[68px] pt-12 lg:pt-[65px] pb-5 lg:pb-15 overflow-y-auto rounded-[8px] scrollbar scrollbar-w-[3px] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-transparent scrollbar-track-blue-light popup-scroll shadow-md ${className}`}
+          } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition ease-out z-9999 duration-600 w-[87%] max-w-[470px] lg:max-w-[512px] max-h-dvh px-5 lg:px-[68px] pt-15 lg:pt-[65px] pb-5 lg:pb-15 overflow-y-auto rounded-[8px] scrollbar scrollbar-w-[3px] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-transparent scrollbar-track-blue-light popup-scroll shadow-md ${className}`}
         onClick={e => e.stopPropagation()}
       >
         <IconButton

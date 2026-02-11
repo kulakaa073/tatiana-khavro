@@ -1,4 +1,5 @@
 // Facebook Pixel utility functions
+
 declare global {
   interface Window {
     fbq: (
