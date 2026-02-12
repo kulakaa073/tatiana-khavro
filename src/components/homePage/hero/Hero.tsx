@@ -38,7 +38,7 @@ export default function Hero() {
           sizes="100vw"
           className="-z-10 object-cover object-top"
         />
-        <div className="absolute left-1/2 -translate-x-1/2 top-[192px] w-[771px] h-[565px] blur-[70.85px] bg-bg-primary pointer-events-none" />
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-400px] w-[300%] h-[565px] blur-[70.85px] bg-bg-primary pointer-events-none" />
       </div>
       <Container className="pt-[222px] ssm:pt-[calc(100dvh*(222/360))] z-10">
         <motion.h1
